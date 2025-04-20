@@ -1,0 +1,54 @@
+# Create a basic HTML template using Bootstrap
+html_template = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Analysis Results</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Analysis Results</h1>
+        <div class="row">
+            <!-- Card for Possible Conditions -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        Possible Conditions
+                    </div>
+                    <div class="card-body">
+                        <ul id="conditions-list" class="list-group list-group-flush">
+                            <!-- Conditions will be inserted here by the backend -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Card for Suggested Medications -->
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        Suggested Medications
+                    </div>
+                    <div class="card-body">
+                        <ul id="medications-list" class="list-group list-group-flush">
+                            <!-- Medications will be inserted here by the backend -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+'''
+
+# Save the template to a file
+with open('results.html', 'w') as file:
+    file.write(html_template)
+
+print("Template 'results.html' has been created.")
